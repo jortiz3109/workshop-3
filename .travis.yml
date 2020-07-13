@@ -1,9 +1,10 @@
+os: linux
 dist: bionic
 language: php
 php:
   - 7.4
 
-service:
+services:
   - mysql
 
 cache:
