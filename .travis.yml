@@ -1,9 +1,10 @@
+os: linux
 dist: bionic
 language: php
 php:
   - 7.4
 
-service:
+services:
   - mysql
 
 cache:
@@ -13,7 +14,7 @@ cache:
 
 before_script:
   - cp .env.travis .env
-  - sudo mysql -e 'CREATE DATABASE workshop-laravel-test;'
+  - sudo mysql -e 'CREATE DATABASE `workshop-laravel-test`;'
   - composer self-update
   - composer install --no-interaction
 
